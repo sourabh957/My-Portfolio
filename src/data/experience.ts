@@ -2,7 +2,7 @@ export const experiences = [
   {
     company: 'StatusNeo Technology Consulting',
     client: 'Piramal Finance',
-    role: 'Digital Product Engineering Consultant (SDE II)',
+    role: 'Software Development Engineer II',
     duration: 'December 2025 – Present',
     location: 'Bangalore, India',
     highlights: [
