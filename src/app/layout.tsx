@@ -10,7 +10,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://sourabh-portfolio.vercel.app'),
+  metadataBase: new URL('https://sourabh-portfolio-lac.vercel.app'),
   title: 'Sourabh Chaudhary — Backend Engineer | Distributed Systems | AI',
   description:
     'Sourabh Chaudhary is a backend engineer specializing in distributed systems, cloud architecture, and AI engineering. SDE II at StatusNeo, working with Piramal Finance.',
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
       'Building scalable backend systems, distributed architectures and AI-powered applications.',
     type: 'website',
     locale: 'en_IN',
-    url: 'https://sourabh-portfolio.vercel.app',
+    url: 'https://sourabh-portfolio-lac.vercel.app',
     siteName: 'Sourabh Chaudhary Portfolio',
   },
   twitter: {
