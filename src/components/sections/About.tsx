@@ -23,8 +23,8 @@ export default function About() {
           <div className="space-y-4 text-zinc-400 leading-8">
             <p>
               I&apos;m Sourabh — a backend engineer with ~4 years of experience building distributed systems,
-              event-driven pipelines, and cloud-native applications. Currently working as a Digital Product
-              Engineering Consultant (SDE II) at StatusNeo, embedded with Piramal Finance.
+              event-driven pipelines, and cloud-native applications. Currently working as a Senior Software
+              Engineer at StatusNeo, embedded with Piramal Finance.
             </p>
             <p>
               I work primarily in Java and Spring Boot, building systems that handle real production load:
@@ -42,7 +42,7 @@ export default function About() {
         <div className="grid gap-4">
           <Card>
             <p className="mb-1 font-mono text-xs uppercase tracking-[0.22em] text-zinc-500">Current role</p>
-            <p className="font-medium text-white">Digital Product Engineering Consultant</p>
+            <p className="font-medium text-white">Senior Software Engineer (SDE II)</p>
             <p className="mt-1 text-sm text-zinc-400">StatusNeo · Piramal Finance · Bangalore</p>
           </Card>
           <Card>

@@ -29,7 +29,7 @@ export function Button({
   );
 
   if (href) {
-    const useAnchor = external || href.startsWith('http') || href.startsWith('mailto:');
+    const useAnchor = external || href.startsWith('http') || href.startsWith('mailto:') || href.startsWith('#');
 
     if (useAnchor) {
       return (

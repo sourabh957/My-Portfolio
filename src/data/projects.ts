@@ -25,7 +25,7 @@ export const projects: Project[] = [
     architecture: ['Client', 'Spring Boot API', 'PostgreSQL', 'AWS S3', 'Presigned URL'],
     tags: ['Spring Boot', 'PostgreSQL', 'Docker', 'AWS S3', 'Java'],
     status: 'building',
-    githubUrl: undefined,
+    githubUrl: 'https://github.com/sourabh957/image-storage-service',
     featured: true,
     concepts: ['Presigned URLs', 'Object Storage', 'Image Metadata', 'Upload/Download Lifecycle', 'Scalable Storage Architecture'],
   },
@@ -39,6 +39,7 @@ export const projects: Project[] = [
     tags: ['FastAPI', 'LangChain', 'LangGraph', 'Python', 'RAG', 'Vector DB'],
     status: 'in-progress',
     featured: true,
+    githubUrl: 'https://github.com/sourabh957/ai-tax-agent',
     concepts: ['AI Agent', 'RAG', 'Embeddings', 'Vector Database', 'LLM', 'Document Processing'],
   },
 ];

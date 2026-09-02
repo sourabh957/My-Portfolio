@@ -49,16 +49,12 @@ export default function Hero() {
         ].join(' ')}
       >
         <div className="flex flex-col justify-center">
-          <Badge variant="accent" className="mb-5 w-fit rounded-full px-3 py-1 text-[11px] uppercase tracking-[0.24em]">
-            Available for engineering opportunities
-          </Badge>
-
           <h1 className="text-4xl font-semibold tracking-tight text-white sm:text-6xl lg:text-7xl">
             Sourabh Chaudhary
           </h1>
 
           <p className="mt-5 text-lg font-medium text-blue-400 sm:text-xl">
-            Digital Product Engineering Consultant · SDE II
+            Senior Software Engineer
           </p>
 
           <div className="mt-4 flex flex-wrap items-center gap-2 text-sm text-zinc-500">
@@ -78,7 +74,7 @@ export default function Hero() {
             <Button href="#projects">View Projects</Button>
             <Button href="/resume" variant="secondary">Resume</Button>
             <Button href={GITHUB_URL} external variant="secondary">GitHub</Button>
-            <Button href={LINKEDIN_URL} external variant="ghost">LinkedIn</Button>
+            <Button href={LINKEDIN_URL} external variant="secondary">LinkedIn</Button>
           </div>
 
           <div className="mt-6 text-sm text-zinc-500">
