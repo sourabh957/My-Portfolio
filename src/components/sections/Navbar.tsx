@@ -2,15 +2,13 @@
 
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
-import { Button } from '@/components/ui/Button';
-import { GITHUB_URL } from '@/data/social';
+import { GITHUB_URL, UPWORK_URL } from '@/data/social';
 
 const navLinks = [
-  { href: '#about', label: 'About' },
-  { href: '#experience', label: 'Experience' },
+  { href: '#services', label: 'Services' },
   { href: '#projects', label: 'Projects' },
-  { href: '#lab', label: 'Lab' },
-  { href: '#achievements', label: 'Achievements' },
+  { href: '#experience', label: 'Experience' },
+  { href: '#credentials', label: 'Credentials' },
   { href: '#contact', label: 'Contact' },
 ];
 
@@ -29,12 +27,12 @@ export default function Navbar() {
     <nav
       className={[
         'fixed inset-x-0 top-0 z-50 transition-colors duration-300 motion-reduce:transition-none',
-        scrolled ? 'border-b border-zinc-800/60 bg-[#0a0a0f]/90 backdrop-blur-xl' : 'bg-transparent',
+        scrolled ? 'border-b border-emerald-100/10 bg-[#07100d]/92 backdrop-blur-xl' : 'bg-transparent',
       ].join(' ')}
     >
-      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto flex h-[72px] max-w-[1180px] items-center justify-between px-5 sm:px-6">
         <Link href="/" className="font-semibold tracking-[0.18em] text-white">
-          SC<span className="text-blue-500">.</span>
+          SC<span className="text-[#9ef7bd]">.</span>
         </Link>
 
         <div className="hidden items-center gap-6 md:flex">
@@ -42,21 +40,21 @@ export default function Navbar() {
             <Link
               key={link.href}
               href={link.href}
-              className="text-sm text-zinc-400 transition-colors hover:text-white"
+              className="text-xs text-[#9baca2] transition-colors hover:text-white"
             >
               {link.label}
             </Link>
           ))}
-          <Button href={GITHUB_URL} external variant="secondary" className="px-3 py-2 text-xs">
-            GitHub
-          </Button>
+          <a href={GITHUB_URL} target="_blank" rel="noopener noreferrer" className="hidden rounded-md border border-emerald-100/15 px-3 py-2 text-xs text-[#c5d0ca] transition-colors hover:border-[#9ef7bd]/50 hover:text-white xl:inline-flex">GitHub ↗</a>
+          <a href={UPWORK_URL} target="_blank" rel="noopener noreferrer" className="rounded-md bg-[#9ef7bd] px-3 py-2 text-xs font-semibold text-[#07100d] transition-colors hover:bg-[#b6facd]">Hire me ↗</a>
         </div>
 
         <button
-          className="rounded-md border border-zinc-800 p-2 text-zinc-400 transition-colors hover:text-white md:hidden"
+          className="rounded-md border border-emerald-100/15 p-2 text-[#9baca2] transition-colors hover:text-white md:hidden"
           onClick={() => setMenuOpen((value) => !value)}
           aria-label="Toggle menu"
           aria-expanded={menuOpen}
+          aria-controls="mobile-navigation"
         >
           <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             {menuOpen ? (
@@ -69,21 +67,19 @@ export default function Navbar() {
       </div>
 
       {menuOpen ? (
-        <div className="border-t border-zinc-800/80 bg-[#0a0a0f]/95 px-4 py-4 backdrop-blur-xl md:hidden">
+        <div id="mobile-navigation" className="border-t border-emerald-100/10 bg-[#07100d]/97 px-4 py-4 backdrop-blur-xl md:hidden">
           <div className="mx-auto flex max-w-6xl flex-col gap-3">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-sm text-zinc-400 transition-colors hover:text-white"
+                className="py-1 text-sm text-[#9baca2] transition-colors hover:text-white"
                 onClick={() => setMenuOpen(false)}
               >
                 {link.label}
               </Link>
             ))}
-            <Button href={GITHUB_URL} external variant="secondary" className="mt-2 w-fit px-3 py-2 text-xs">
-              GitHub
-            </Button>
+            <div className="mt-2 flex gap-2"><a href={GITHUB_URL} target="_blank" rel="noopener noreferrer" className="rounded-md border border-emerald-100/15 px-3 py-2 text-xs">GitHub ↗</a><a href={UPWORK_URL} target="_blank" rel="noopener noreferrer" className="rounded-md bg-[#9ef7bd] px-3 py-2 text-xs font-semibold text-[#07100d]">Hire me ↗</a></div>
           </div>
         </div>
       ) : null}

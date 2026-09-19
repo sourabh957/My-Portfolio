@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { SectionContainer } from '@/components/ui/SectionContainer';
 import { achievements } from '@/data/achievements';
 import { experiences } from '@/data/experience';
-import { EMAIL, GITHUB_URL, LINKEDIN_URL } from '@/data/social';
+import { EMAIL, GITHUB_URL, LINKEDIN_URL, UPWORK_URL } from '@/data/social';
 
 export const metadata: Metadata = {
   title: 'Resume Overview — Sourabh Chaudhary',
@@ -17,7 +17,7 @@ export default function ResumePage() {
           <p className="mb-3 text-xs font-mono uppercase tracking-[0.3em] text-zinc-500">Resume Overview</p>
           <h1 className="text-3xl font-semibold text-white sm:text-4xl">Sourabh Chaudhary</h1>
           <p className="mt-3 max-w-2xl text-sm leading-7 text-zinc-400 sm:text-base">
-            Backend engineer focused on distributed systems, cloud-native platforms, and AI-assisted engineering workflows.
+            Java backend engineer focused on Spring Boot services, event-driven systems, performance, and reliable cloud delivery.
           </p>
           <div className="mt-6 flex flex-wrap gap-3 text-sm text-zinc-300">
             <a className="rounded-md border border-zinc-800 px-3 py-2 hover:border-zinc-700 hover:text-white" href={`mailto:${EMAIL}`}>
@@ -28,6 +28,9 @@ export default function ResumePage() {
             </a>
             <a className="rounded-md border border-zinc-800 px-3 py-2 hover:border-zinc-700 hover:text-white" href={LINKEDIN_URL} target="_blank" rel="noreferrer">
               LinkedIn
+            </a>
+            <a className="rounded-md border border-emerald-400/30 px-3 py-2 text-emerald-200 hover:border-emerald-300 hover:text-white" href={UPWORK_URL} target="_blank" rel="noreferrer">
+              Upwork
             </a>
           </div>
         </div>
@@ -67,9 +70,6 @@ export default function ResumePage() {
               </ul>
             </div>
 
-            <div className="rounded-2xl border border-amber-500/20 bg-amber-500/5 p-6 text-sm text-amber-100">
-              A downloadable PDF resume was not provided in the source files, so this page serves as the portfolio&apos;s resume view.
-            </div>
           </section>
         </div>
       </SectionContainer>

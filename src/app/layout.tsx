@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import { Inter, JetBrains_Mono } from 'next/font/google';
 import type { ReactNode } from 'react';
 import './globals.css';
 
@@ -9,11 +9,13 @@ const inter = Inter({
   variable: '--font-inter',
 });
 
+const mono = JetBrains_Mono({ subsets: ['latin'], display: 'swap', variable: '--font-mono' });
+
 export const metadata: Metadata = {
   metadataBase: new URL('https://sourabh-portfolio-lac.vercel.app'),
-  title: 'Sourabh Chaudhary — Backend Engineer | Distributed Systems | AI',
+  title: { default: 'Sourabh Chaudhary - Java Backend Engineer', template: '%s | Sourabh Chaudhary' },
   description:
-    'Sourabh Chaudhary is a backend engineer specializing in distributed systems, cloud architecture, and AI engineering. SDE II at StatusNeo, working with Piramal Finance.',
+    'Java backend engineer for Spring Boot APIs, Kafka integrations, Redis performance, PostgreSQL, and cloud delivery. Available for freelance backend projects.',
   keywords: [
     'Sourabh Chaudhary',
     'Backend Engineer',
@@ -21,15 +23,15 @@ export const metadata: Metadata = {
     'Java Backend Engineer',
     'Spring Boot',
     'Distributed Systems',
-    'AI Engineer',
-    'FDE',
-    'Forward Deployed Engineer',
+    'Freelance Backend Developer',
+    'Apache Kafka',
+    'Redis',
   ],
   authors: [{ name: 'Sourabh Chaudhary' }],
   openGraph: {
-    title: 'Sourabh Chaudhary — Backend Engineer | Distributed Systems | AI',
+    title: 'Sourabh Chaudhary - Java Backend Engineer',
     description:
-      'Building scalable backend systems, distributed architectures and AI-powered applications.',
+      'Java backend delivery and rescue: Spring Boot, Kafka, Redis, PostgreSQL, AWS, and GCP.',
     type: 'website',
     locale: 'en_IN',
     url: 'https://sourabh-portfolio-lac.vercel.app',
@@ -37,19 +39,19 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Sourabh Chaudhary — Backend Engineer',
+    title: 'Sourabh Chaudhary - Java Backend Engineer',
     description:
-      'Building scalable backend systems, distributed architectures and AI-powered applications.',
+      'Java backend delivery and rescue: Spring Boot, Kafka, Redis, PostgreSQL, AWS, and GCP.',
   },
   alternates: {
-    canonical: 'https://sourabh-portfolio.vercel.app',
+    canonical: 'https://sourabh-portfolio-lac.vercel.app',
   },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: ReactNode }>) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={`${inter.variable} ${inter.className} bg-[#0a0a0f] text-zinc-100 antialiased`}>
+      <body className={`${inter.variable} ${mono.variable} ${inter.className} bg-[#07100d] text-zinc-100 antialiased`}>
         {children}
       </body>
     </html>

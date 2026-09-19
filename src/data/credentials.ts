@@ -1,0 +1,38 @@
+export const credentials = [
+  {
+    id: 'software-engineer',
+    issuer: 'HackerRank',
+    type: 'Certification',
+    title: 'Software Engineer',
+    description: 'Technical skills assessment earned in June 2024.',
+    image: '/certificates/software-engineer.png',
+    url: 'https://www.hackerrank.com/certificates/430d9f688730',
+  },
+  {
+    id: 'orchestrate',
+    issuer: 'HackerRank',
+    type: 'Competition',
+    title: 'Orchestrate - September 2026',
+    description: 'Ranked 491 of 3,062 participants (top 16.1%) for building and deploying an AI agent.',
+    image: '/certificates/orchestrate.png',
+    url: 'https://drive.google.com/file/d/1q79ghxwp0AUrSpzmg7YvXpuWp4E9zemN/view',
+  },
+  {
+    id: 'coderit',
+    issuer: 'CodeRIT - Ramaiah',
+    type: 'Competition awards',
+    title: 'Three first-place finishes',
+    description: 'Competitive Coding Contests 1 and 2 (2020), and On Your Marks (2021).',
+    image: '/certificates/coderit-october.jpg',
+    url: 'https://drive.google.com/drive/folders/1mEoEAX8qVK1PJDyduxTqezlHk50jUP1V',
+  },
+  {
+    id: 'problem-solving-intermediate',
+    issuer: 'HackerRank',
+    type: 'Certification',
+    title: 'Problem Solving (Intermediate)',
+    description: 'HackerRank problem-solving skills assessment earned in August 2026.',
+    image: '/certificates/problem-solving-intermediate.png',
+    url: 'https://www.hackerrank.com/certificates/85f0c0c5d196',
+  },
+];
