@@ -6,8 +6,9 @@ import { experiences } from '@/data/experience';
 import { EMAIL, GITHUB_URL, LINKEDIN_URL, UPWORK_URL } from '@/data/social';
 
 export const metadata: Metadata = {
-  title: 'Resume Overview — Sourabh Chaudhary',
-  description: 'Resume overview for Sourabh Chaudhary.',
+  title: 'Background',
+  description: 'Experience, education, and achievements of Sourabh Chaudhary, Java backend engineer.',
+  alternates: { canonical: '/resume' },
 };
 
 export default function ResumePage() {

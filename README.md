@@ -5,7 +5,7 @@ Freelancer-facing portfolio for Sourabh Chaudhary, positioned around Java backen
 ## Local development
 
 ```bash
-cd site
+npm install
 npm run dev
 ```
 

@@ -15,6 +15,7 @@ export const credentials = [
     title: 'Orchestrate - September 2026',
     description: 'Ranked 491 of 3,062 participants (top 16.1%) for building and deploying an AI agent.',
     image: '/certificates/orchestrate.png',
+    animation: '/certificates/orchestrate-animated.webp',
     url: 'https://drive.google.com/file/d/1q79ghxwp0AUrSpzmg7YvXpuWp4E9zemN/view',
   },
   {
