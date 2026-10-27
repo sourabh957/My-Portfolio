@@ -37,6 +37,23 @@ const services = [
   },
 ];
 
+const caseStudies = [
+  {
+    context: 'PORTER / PAYMENTS',
+    title: 'Faster payment reconciliation',
+    problem: 'Payment reconciliation was slow, and the business was losing revenue to leakage.',
+    work: 'Added Redis caching and tuned the PostgreSQL queries the reconciliation depended on.',
+    results: ['45% less processing time', 'About ₹2.5 Cr a year in revenue leakage prevented'],
+  },
+  {
+    context: 'PORTER / PARTNER EVENTS',
+    title: 'Live Diwali rewards for 6 lakh drivers',
+    problem: 'The Diwali rewards and recognition program had to track and rank partner activity across 4 lakh+ events a day to retain supply at peak demand.',
+    work: 'Built a Kafka pipeline (producers, consumers and a Kafka Connect JDBC sink) to sync order counts and login hours across services in near real time, with Redis sorted-set leaderboards for ranking.',
+    results: ['4 lakh+ partner events a day', '6 lakh drivers engaged', '+3% fulfillment at Diwali peak'],
+  },
+];
+
 const results = [
   { value: '40%', label: 'lower inter-service latency', context: 'StatusNeo - Piramal Finance' },
   { value: '400K+', label: 'partner events handled daily', context: 'Porter - Rewards and Recognition' },
@@ -80,6 +97,11 @@ export default function Home() {
         </section>
 
         <section className="results-band" aria-labelledby="results-title"><div className="shell"><div className="results-intro"><h2 id="results-title">Experience with measurable impact.</h2><p>Selected results from my employment - not benchmarks for the projects below.</p></div><div className="results-grid">{results.map((result) => <div className="result" key={result.label}><strong>{result.value}</strong><span>{result.label}</span><small>{result.context}</small></div>)}</div></div></section>
+
+        <section id="case-studies" className="section shell">
+          <div className="section-heading"><div><p className="eyebrow">CASE STUDIES</p><h2>Real problems.<br />Measured results.</h2></div><p>Two pieces of production work: what was wrong, what I changed, and what improved. No confidential details or code.</p></div>
+          <div className="case-grid">{caseStudies.map((study) => <article className="case-card" key={study.title}><p className="eyebrow">{study.context}</p><h3>{study.title}</h3><dl><div><dt>Problem</dt><dd>{study.problem}</dd></div><div><dt>What I did</dt><dd>{study.work}</dd></div><div><dt>Result</dt><dd><ul>{study.results.map((result) => <li key={result}>{result}</li>)}</ul></dd></div></dl></article>)}</div>
+        </section>
 
         <section id="projects" className="section shell">
           <div className="section-heading"><div><p className="eyebrow">SELECTED WORK / 01-04</p><h2>Read the code.<br />See the decisions.</h2></div><p>Public backend projects with source, setup instructions, and API examples. Built to demonstrate specific engineering skills.</p></div>
