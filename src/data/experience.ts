@@ -3,7 +3,7 @@ export const experiences = [
     company: 'StatusNeo Technology Consulting',
     client: 'Piramal Finance',
     role: 'Software Development Engineer II',
-    duration: 'December 2025 – Present',
+    duration: 'December 2025 – August 2026',
     location: 'Bangalore, India',
     highlights: [
       {

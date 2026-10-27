@@ -12,18 +12,28 @@ const services = [
     title: 'Build your backend',
     description: 'Java and Spring Boot APIs, database design, third-party integrations, and maintainable service boundaries.',
     tags: 'REST APIs / PostgreSQL / Spring Boot',
+    link: { label: 'Discuss your project on Upwork', href: UPWORK_URL },
   },
   {
     number: '02',
     title: 'Fix what is slowing you down',
     description: 'Trace failing requests, investigate slow queries, tune Redis caching, and make existing services easier to operate.',
     tags: 'Debugging / Performance / Redis',
+    link: { label: 'See the fixed-price project', href: 'https://www.upwork.com/services/product/development-it-slow-java-spring-boot-apis-and-database-queries-diagnosed-and-fixed-2110296798428954322' },
   },
   {
     number: '03',
     title: 'Connect and ship your systems',
     description: 'Kafka integrations, event-driven workflows, Docker packaging, and deployment troubleshooting on AWS or GCP.',
     tags: 'Kafka / Docker / AWS and GCP',
+    link: { label: 'See the Kafka audit project', href: 'https://www.upwork.com/services/product/development-it-a-kafka-consumer-lag-and-pipeline-audit-with-a-prioritized-fix-plan-2110293802583061211' },
+  },
+  {
+    number: '04',
+    title: 'Add AI to your Java backend',
+    description: 'Document Q&A over your own data (RAG) and AI agents that call your existing APIs, with tests, guardrails and cost control.',
+    tags: 'RAG / AI agents / Amazon Bedrock',
+    link: { label: 'See the fixed-price project', href: 'https://www.upwork.com/services/product/development-it-an-ai-feature-rag-or-ai-agent-added-to-your-java-spring-boot-backend-2110300193191904319' },
   },
 ];
 
@@ -66,7 +76,7 @@ export default function Home() {
 
         <section id="services" className="section shell">
           <div className="section-heading"><div><p className="eyebrow">HOW I CAN HELP</p><h2>Backend delivery.<br />And backend rescue.</h2></div><p>Starting from a brief or an existing codebase? I can help you get the next useful piece shipped.</p></div>
-          <div className="service-grid">{services.map((service) => <article className="service-card" key={service.number}><span className="item-number">{service.number}</span><h3>{service.title}</h3><p>{service.description}</p><div className="service-tags">{service.tags}</div></article>)}</div>
+          <div className="service-grid">{services.map((service) => <article className="service-card" key={service.number}><span className="item-number">{service.number}</span><h3>{service.title}</h3><p>{service.description}</p><div className="service-tags">{service.tags}</div><a className="service-link" href={service.link.href} target="_blank" rel="noopener noreferrer">{service.link.label} <span aria-hidden="true">↗</span></a></article>)}</div>
         </section>
 
         <section className="results-band" aria-labelledby="results-title"><div className="shell"><div className="results-intro"><h2 id="results-title">Experience with measurable impact.</h2><p>Selected results from my employment - not benchmarks for the projects below.</p></div><div className="results-grid">{results.map((result) => <div className="result" key={result.label}><strong>{result.value}</strong><span>{result.label}</span><small>{result.context}</small></div>)}</div></div></section>
@@ -81,7 +91,7 @@ export default function Home() {
             <div className="tag-list">{project.tags.map((tag) => <span key={tag}>{tag}</span>)}</div>
             <a className="project-link" href={project.githubUrl} target="_blank" rel="noopener noreferrer" aria-label={`View ${project.title} source and documentation on GitHub`}>Source and documentation <span aria-hidden="true">↗</span></a>
           </article>)}</div>
-          <div className="secondary-work"><div><span className="eyebrow">ALSO EXPLORING / AI ENGINEERING</span><h3>AI Tax Agent</h3><p>An in-progress exploration of document retrieval and LLM workflows. AI is an additional capability; Java backend engineering is my core focus.</p></div><a className="action secondary" href="https://github.com/sourabh957/ai-tax-agent" target="_blank" rel="noopener noreferrer">Explore repository ↗</a></div>
+          <div className="secondary-work"><div><span className="eyebrow">ALSO EXPLORING / AI ENGINEERING</span><h3>Taxly: AI Tax Assistant</h3><p>Answers Indian tax questions with deterministic calculators and cited answers from a hybrid RAG knowledge base, built with FastAPI, LangGraph on Amazon Bedrock and Qdrant. AI is an additional capability; Java backend engineering is my core focus.</p></div><a className="action secondary" href="https://github.com/sourabh957/ai-tax-agent" target="_blank" rel="noopener noreferrer">Explore repository ↗</a></div>
         </section>
 
         <section id="experience" className="section shell section-rule">
@@ -98,7 +108,7 @@ export default function Home() {
 
         <section id="contact" className="section shell"><div className="contact-panel"><p className="eyebrow">LET&apos;S BUILD SOMETHING USEFUL</p><h2>A new API?<br />A stubborn backend issue?</h2><p>Tell me what needs to work, what is getting in the way, and your target timeline. We can start with a focused scope and clear deliverables.</p><div className="actions"><a className="action primary" href={UPWORK_URL} target="_blank" rel="noopener noreferrer">Discuss your project on Upwork ↗</a><a className="action secondary" href={`mailto:${EMAIL}`}>Email me ↗</a></div><small>Working together through Upwork? Keep project communication and payments on Upwork.</small></div></section>
       </main>
-      <footer className="shell footer"><p><strong>SC<span>.</span></strong> Sourabh Chaudhary <span className="footer-role">/ Java Backend Engineer</span></p><div><a href={GITHUB_URL} target="_blank" rel="noopener noreferrer">GitHub ↗</a><a href={LINKEDIN_URL} target="_blank" rel="noopener noreferrer">LinkedIn ↗</a><Link href="/resume">Background ↗</Link><a href="#main-content">Back to top ↑</a></div></footer>
+      <footer className="shell footer"><p><strong>SC<span>.</span></strong> Sourabh Chaudhary <span className="footer-role">/ Java Backend Engineer</span></p><div><a href={UPWORK_URL} target="_blank" rel="noopener noreferrer">Upwork ↗</a><a href={GITHUB_URL} target="_blank" rel="noopener noreferrer">GitHub ↗</a><a href={LINKEDIN_URL} target="_blank" rel="noopener noreferrer">LinkedIn ↗</a><Link href="/resume">Background ↗</Link><a href="#main-content">Back to top ↑</a></div></footer>
     </>
   );
 }

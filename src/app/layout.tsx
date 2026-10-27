@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Inter, JetBrains_Mono } from 'next/font/google';
 import type { ReactNode } from 'react';
+import { GITHUB_URL, LINKEDIN_URL, SITE_URL, UPWORK_URL } from '@/data/social';
 import './globals.css';
 
 const inter = Inter({
@@ -48,10 +49,38 @@ export const metadata: Metadata = {
   },
 };
 
+const personJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: 'Sourabh Chaudhary',
+  jobTitle: 'Java Backend Engineer',
+  url: SITE_URL,
+  sameAs: [GITHUB_URL, LINKEDIN_URL, UPWORK_URL],
+  address: { '@type': 'PostalAddress', addressLocality: 'Bengaluru', addressCountry: 'IN' },
+  alumniOf: { '@type': 'CollegeOrUniversity', name: 'Ramaiah Institute of Technology' },
+  knowsAbout: [
+    'Java',
+    'Spring Boot',
+    'Apache Kafka',
+    'Redis',
+    'PostgreSQL',
+    'Microservices',
+    'REST APIs',
+    'AWS',
+    'Google Cloud Platform',
+    'Retrieval-augmented generation',
+    'AI agents',
+  ],
+};
+
 export default function RootLayout({ children }: Readonly<{ children: ReactNode }>) {
   return (
     <html lang="en" className="scroll-smooth" data-scroll-behavior="smooth">
       <body className={`${inter.variable} ${mono.variable} ${inter.className} bg-[#07100d] text-zinc-100 antialiased`}>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd).replace(/</g, '\\u003c') }}
+        />
         {children}
       </body>
     </html>

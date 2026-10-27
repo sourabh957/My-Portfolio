@@ -85,13 +85,15 @@ body {
 .section-heading { display: grid; grid-template-columns: 1fr minmax(260px, 390px); gap: 50px; align-items: end; margin-bottom: 52px; }
 .section-heading h2, .results-intro h2, .contact-panel h2 { margin: 14px 0 0; font-size: clamp(2.4rem, 4.8vw, 4.45rem); line-height: 1.02; letter-spacing: -.055em; }
 .section-heading > p { margin: 0; color: #96a89d; line-height: 1.75; }
-.service-grid { display: grid; grid-template-columns: repeat(3,1fr); border-block: 1px solid var(--border); }
-.service-card { min-height: 315px; padding: 30px 30px 25px 0; }
-.service-card + .service-card { border-left: 1px solid var(--border); padding-left: 30px; }
+.service-grid { display: grid; grid-template-columns: repeat(4,1fr); border-block: 1px solid var(--border); }
+.service-card { display: flex; flex-direction: column; min-height: 315px; padding: 30px 24px 25px 0; }
+.service-card + .service-card { border-left: 1px solid var(--border); padding-left: 24px; }
 .item-number { color: var(--accent); font-family: monospace; font-size: .72rem; }
 .service-card h3 { margin: 58px 0 15px; font-size: 1.25rem; }
 .service-card > p { margin: 0; color: #97a99e; line-height: 1.65; font-size: .91rem; }
 .service-tags { margin-top: 48px; color: #708178; font-family: monospace; font-size: .68rem; letter-spacing: .03em; }
+.service-link { margin-top: auto; padding-top: 22px; color: var(--accent); font-size: .78rem; font-weight: 650; }
+.service-link:hover { text-decoration: underline; text-underline-offset: 4px; }
 
 .results-band { border-block: 1px solid rgba(158,247,189,.16); background: linear-gradient(90deg, rgba(20,61,43,.7), rgba(10,35,25,.48)); padding-block: 70px; }
 .results-band > .shell { display: grid; grid-template-columns: .8fr 2fr; gap: 70px; align-items: end; }
@@ -173,6 +175,9 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px soli
 @media (max-width: 1100px) {
   .hero { grid-template-columns: 1fr; min-height: auto; padding-top: 125px; }
   .system-panel { max-width: 680px; }
+  .service-grid { grid-template-columns: repeat(2,1fr); }
+  .service-card:nth-child(3) { border-left: 0; padding-left: 0; }
+  .service-card:nth-child(n+3) { border-top: 1px solid var(--border); }
   .experience-strip .shell { grid-template-columns: 1fr 1fr; padding-block: 20px; }
   .results-band > .shell { grid-template-columns: 1fr; }
   .credential-card { grid-column: span 3; }
@@ -186,6 +191,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px soli
   .service-grid, .project-grid, .results-grid { grid-template-columns: 1fr; }
   .service-card, .service-card + .service-card { min-height: 0; border-left: 0; border-bottom: 1px solid var(--border); padding: 28px 0; }
   .service-card:last-child { border-bottom: 0; }
+  .service-card:nth-child(n+3) { border-top: 0; }
   .service-card h3 { margin-top: 28px; }
   .service-tags { margin-top: 24px; }
   .results-grid { gap: 28px; }
